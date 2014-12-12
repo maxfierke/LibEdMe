@@ -1,0 +1,49 @@
+<div class="jumbotron">
+  <h1>Lib-Ed Me!</h1>
+  <form name="search" class="form-inline" role="form" ng-submit="findForMe()">
+    <span class="h2">I'm looking to fulfill</span>
+    <div class="form-group">
+      <select ng-model="selected.libed" ng-options="core.code as core.title for core in options.libeds" class="form-control"></select>
+    </div>
+    <span class="h2">lib-ed requirement</span>
+
+    <a ng-click="showAdvanced = !showAdvanced">
+      <span class="glyphicon" ng-class="{ 'glyphicon-chevron-right': !showAdvanced, 'glyphicon-chevron-down': showAdvanced }"></span>
+      Advanced
+    </a>
+
+    <div class="animate-show" ng-show="showAdvanced">
+      <span class="h2">but only if fulfills the</span>
+      <div class="form-group">
+        <select ng-model="selected.theme" ng-options="theme.code as theme.title for theme in options.themes" class="form-control"></select>
+      </div>
+      <span class="h2">theme and</span>
+      <select ng-model="selected.writing_intensive" ng-options="wi.val as wi.label for wi in options.writing_intensive" class="form-control"></select>
+      <span class="h2">writing intensive</span>
+    </div>
+
+    <hr />
+    <button class="btn btn-lg btn-primary" type="submit">
+      Find Me Something
+    </button>
+  </form>
+</div>
+
+<div class="well text-center animate-if" ng-if="selected.course">
+  <div class="animate-hide" ng-hide="showDetails">
+    <h2>How about</h2>
+    <h4>{{ selected.course.subject }} {{ selected.course.catalog_number }}: {{ selected.course.title }}?</h4>
+
+    <button class="btn btn-lg btn-success" ng-click="showDetails = true">
+      Yeah, that sounds cool.
+    </button>
+    <button class="btn btn-lg btn-danger" ng-click="suggestACourse()">
+      Nah, what else you got?
+    </button>
+  </div>
+
+  <div class="animate-show" ng-show="showDetails">
+    <h2>It has been decreed... You shall take:</h2>
+    <h4>{{ selected.course.subject }} {{ selected.course.catalog_number }}: {{ selected.course.title }}?</h4>
+  </div>
+</div>
