@@ -37,12 +37,12 @@ angular.module('libedMeApp')
             { code: 'Socs', title: 'my Social Sciences' }
         ],
         themes: [
-            { code: '', title: 'Any' },
-            { code: 'GP', title: 'Global Perspectives' },
-            { code: 'TS', title: 'Technology and Society' },
-            { code: 'CIV', title: 'Civic Life and Ethics' },
-            { code: 'DSJ', title: 'Diversity and Social Justice in the U.S.' },
-            { code: 'ENV', title: 'The Environment' }
+            { code: '', title: 'any' },
+            { code: 'GP', title: 'the Global Perspectives' },
+            { code: 'TS', title: 'the Technology and Society' },
+            { code: 'CIV', title: 'the Civic Life and Ethics' },
+            { code: 'DSJ', title: 'the Diversity and Social Justice in the U.S.' },
+            { code: 'ENV', title: 'the Environment' }
         ],
         writing_intensive: [
             { val: null, label: 'is or isn\'t' },
