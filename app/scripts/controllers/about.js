@@ -16,6 +16,8 @@ angular.module('libedMeApp')
       'Karma',
       'Yeoman',
       'Node.js & Express',
-      'Heroku'
+      'Heroku',
+      'probably Coffee',
+      'intrepid spirit'
     ];
   });
