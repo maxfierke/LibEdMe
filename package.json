@@ -46,7 +46,7 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install; ./node_modules/grunt-cli/bin/grunt build",
+    "postinstall": "bower install && grunt build",
     "test": "grunt test"
   }
 }
