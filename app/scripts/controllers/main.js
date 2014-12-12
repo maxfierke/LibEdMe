@@ -19,7 +19,7 @@ angular.module('libedMeApp')
         libed: '',
         subject: '',
         theme: '',
-        writing_intensive: false,
+        writing_intensive: null,
         course: null
     };
 
@@ -47,7 +47,7 @@ angular.module('libedMeApp')
         writing_intensive: [
             { val: null, label: 'is or isn\'t' },
             { val: true, label: 'is'},
-            { val: false, label: 'isn\'t' }
+            //{ val: false, label: 'isn\'t' }
         ]
     };
 
