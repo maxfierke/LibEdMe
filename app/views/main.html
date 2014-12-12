@@ -23,7 +23,8 @@
       </div>
       theme and
       <select ng-model="selected.writing_intensive" ng-options="wi.val as wi.label for wi in options.writing_intensive" class="form-control"></select>
-      writing intensive
+      writing intensive and in the subject of
+      <input type="text" ng-model="selected.subject" maxlength="4" class="form-control" />
     </div>
 
     <hr />

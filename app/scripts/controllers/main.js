@@ -67,6 +67,10 @@ angular.module('libedMeApp')
             params.push('writing_intensive='+$scope.selected.writing_intensive);
         }
 
+        if ($scope.selected.subject != null && $scope.selected.subject != '') {
+            params.push('subject='+$scope.selected.subject);
+        }
+
         return baseUrl + params.join(",");
     };
 
