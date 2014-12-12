@@ -50,8 +50,8 @@ angular.module('libedMeApp')
     };
 
     $scope.buildUrlFromSelection = function () {
-    	var baseUrl = '/liberal_education_courses/courses.json?q=';
-    	var params = [];
+        var baseUrl = 'https://apps.asr.umn.edu/liberal_education_courses/courses.json?q=';
+        var params = [];
 
     	if ($scope.selected.libed != '') {
     		params.push('diversified_core=' + $scope.selected.libed);
