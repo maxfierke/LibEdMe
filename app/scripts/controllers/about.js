@@ -11,6 +11,7 @@ angular.module('libedMeApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
+      'Bootstrap (clearly)',
       'AngularJS',
       'Karma',
       'Yeoman',
