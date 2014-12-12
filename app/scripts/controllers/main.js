@@ -13,6 +13,8 @@ angular.module('libedMeApp')
     $scope.showDetails = false;
     $scope.showAdvanced = false;
 
+    $scope.errorMessage = '';
+
     $scope.selected = {
         libed: '',
         subject: '',
@@ -69,15 +71,20 @@ angular.module('libedMeApp')
     };
 
     $scope.findForMe = function () {
+        $scope.errorMessage = "";
         $scope.selected.course = null;
 
         return $http.get($scope.buildUrlFromSelection())
                 .success(function (response) {
+                    if (response.courses.length == 0) {
+                        $scope.errorMessage = "No courses could be found to fulfill your requirements.";
+                    }
+
                     $scope.courses = response.courses;
                     $scope.suggestACourse();
                 })
                 .error(function (response) {
-
+                    $scope.errorMessage = "An error occured while trying to find relevant courses. Try again in a bit!"
                 });
     };
 

@@ -33,6 +33,10 @@
   </form>
 </div>
 
+<div class="alert alert-danger" ng-show="errorMessage != ''">
+  <strong>Sorry!</strong> {{ errorMessage }}
+</div>
+
 <div class="well text-center animate-if" ng-if="selected.course">
   <div class="animate-hide" ng-hide="showDetails">
     <h2>How about</h2>
