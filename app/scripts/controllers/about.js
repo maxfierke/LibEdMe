@@ -12,6 +12,9 @@ angular.module('libedMeApp')
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
-      'Karma'
+      'Karma',
+      'Yeoman',
+      'Node.js & Express',
+      'Heroku'
     ];
   });
