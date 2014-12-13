@@ -23,6 +23,8 @@ angular.module('libedMeApp')
         course: null
     };
 
+    $scope.defaults = angular.copy($scope.selected);
+
     $scope.courses = [];
 
     $scope.options = {
@@ -95,5 +97,11 @@ angular.module('libedMeApp')
     $scope.suggestACourse = function () {
         $scope.showDetails = false;
         $scope.selected.course = _.sample($scope.courses);
+    };
+
+    $scope.resetToDefaults = function () {
+        $scope.showDetails = false;
+        $scope.errorMessage = '';
+        $scope.selected = angular.copy($scope.defaults);
     };
   }]);
