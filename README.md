@@ -3,7 +3,7 @@ This is a thing that suggests what courses to take to fulfill a lib-ed requireme
 
 ## Who made this?
 
-I made this. I'm [Max Fierke](https://www.maxfierke.com). I do lots of web things. I also do some other stuff. I'm on [Twitter](https://twitter.com/m4xm4n) and [GitHub](https://github.com/maxfierke) and stuff.
+I made this. I'm [Max Fierke](https://www.maxfierke.com). I do lots of web things. I also do some other stuff. I'm on [Twitter](https://twitter.com/m4xm4n) and [GitHub](https://github.com/maxfierke) and stuff. I like seeing how long it takes me to make single-use apps. See [DoWeJustLeaveTheseHere](http://www.dowejustleavethesehere.com) and [SandwichRoulette](https://play.google.com/store/apps/details?id=com.maxfierke.sandwichroulette)
 
 ## Who provides the data?
 
