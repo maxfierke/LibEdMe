@@ -19,7 +19,7 @@ angular.module('libedMeApp')
         libed: '',
         subject: '',
         theme: '',
-        writing_intensive: null,
+        writing_intensive: '',
         course: null
     };
 
@@ -47,9 +47,9 @@ angular.module('libedMeApp')
             { code: 'ENV', title: 'the Environment' }
         ],
         writing_intensive: [
-            { val: null, label: 'is or isn\'t' },
+            { val: '', label: 'is or isn\'t' },
             { val: true, label: 'is'},
-            //{ val: false, label: 'isn\'t' }
+            { val: false, label: 'isn\'t' }
         ]
     };
 
@@ -65,7 +65,7 @@ angular.module('libedMeApp')
             params.push('designated_theme=' + $scope.selected.theme);
         }
 
-        if ($scope.selected.writing_intensive != null) {
+        if ($scope.selected.writing_intensive !== '') {
             params.push('writing_intensive='+$scope.selected.writing_intensive);
         }
 
