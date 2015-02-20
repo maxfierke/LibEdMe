@@ -54,7 +54,7 @@ angular.module('libedMeApp')
     };
 
     $scope.buildUrlFromSelection = function () {
-        var baseUrl = 'https://apps.asr.umn.edu/liberal_education_courses/courses.json?q=';
+        var baseUrl = 'https://apps.asr.umn.edu/liberal_education_courses/courses.json';
         var params = [];
 
         if ($scope.selected.libed != '') {
@@ -66,14 +66,18 @@ angular.module('libedMeApp')
         }
 
         if ($scope.selected.writing_intensive !== '') {
-            params.push('writing_intensive='+$scope.selected.writing_intensive);
+            params.push('writing_intensive=' + $scope.selected.writing_intensive);
         }
 
         if ($scope.selected.subject != null && $scope.selected.subject != '') {
             params.push('subject='+$scope.selected.subject);
         }
 
-        return baseUrl + params.join(",");
+        if (params.length > 0) {
+            return baseUrl + "?q=" + params.join(",");
+        } else {
+            return baseUrl;
+        }
     };
 
     $scope.findForMe = function () {
