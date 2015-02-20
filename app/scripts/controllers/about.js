@@ -18,6 +18,7 @@ angular.module('libedMeApp')
       'Node.js & Express',
       'Heroku',
       'probably Coffee',
-      'intrepid spirit'
+      'intrepid spirit',
+      'Kanye West'
     ];
   });
