@@ -54,7 +54,7 @@ angular.module('libedMeApp')
     };
 
     $scope.buildUrlFromSelection = function () {
-        var baseUrl = 'https://apps.asr.umn.edu/liberal_education_courses/courses.json';
+        var baseUrl = 'https://liberal-education-courses.umn.edu/courses.json';
         var params = [];
 
         if ($scope.selected.libed != '') {
